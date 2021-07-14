@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue todo</title>
+</head>
+<body>
+  
+  <main id="app">
+  <h1>Form tambah data</h1>
+  <form id="formDataFilm">
+    <div class="form-element">
+        <input type="text" id="judul" name="judul" placeholder="cari judul film .." required>
+        <button class="cari-btn">tambah</button>
+    </div>
+  </form>
+  <ul v-for="item in dataTodo">
+    <li>{{ item }}</li>
+  </ul>
+  </main>
+
+  <script src="https://unpkg.com/vue@next"></script>
+  <script src="index.js"></script>
+</body>
+</html>

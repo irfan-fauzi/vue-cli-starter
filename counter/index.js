@@ -3,15 +3,15 @@ const app = Vue.createApp({
   data(){
     // object reactivity
     return {
-      counter : 5
+      counter : 0
     }
   },
   methods: {
     increment(){
-      console.log("ok")
+      this.counter++;
     },
     decrement(){
-      console.log("del")
+      this.counter--;
     }
   }
 })
