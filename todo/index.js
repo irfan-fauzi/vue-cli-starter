@@ -1,7 +1,15 @@
 const app = Vue.createApp({
   data(){
     return {
-      dataTodo: ["satu", "dua", "tiga"]
+      dataTodo: [],
+      newTodo: ''
+    }
+  },
+  methods: {
+    tambahData(e){
+      this.dataTodo.push(this.newTodo)
+      this.newTodo = ''
+      e.preventDefault()
     }
   }
 })
