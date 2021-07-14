@@ -3,7 +3,7 @@ const app = Vue.createApp({
   data(){
     // object reactivity
     return {
-
+      counter : 5
     }
   }
 })
