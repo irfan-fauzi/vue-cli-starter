@@ -12,10 +12,8 @@ const app = Vue.createApp({
         this.newTodo = ''
       }
     },
-    hapusItem(){
-        if(this.dataTodo.length){
-
-        }
+    hapusItem(index){
+      this.dataTodo.splice(index, 1)
     }
   },
   // computed : menerima value yang reaktif

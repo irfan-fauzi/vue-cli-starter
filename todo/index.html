@@ -18,10 +18,11 @@
         <button class="cari-btn">tambah</button>
       </div>
     </form>
-
-    <ul v-for="item in dataTodo" >
+    <!-- v-for bisa menampung data array dan indexnya -->
+    <ul v-for="item, index in dataTodo" >
       <li class="list"><p>{{ item }}</p>
-        <button>Hapus</button>
+        <!-- @click / v-on:click dapat menginvok function(param)-->
+        <button @click="hapusItem(index)">Hapus</button>
       </li>
     </ul>
 
