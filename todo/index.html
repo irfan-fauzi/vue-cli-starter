@@ -5,24 +5,30 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vue todo</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   
   <main id="app">
     <h1>Form tambah data</h1>
-    <form v-on:submit="tambahData">
+    <form v-on:submit.prevent="tambahData">
       <div>
         <!-- v-model untuk interaksi data -->
         <input v-model="newTodo" type="text" id="judul" name="judul">
         <button class="cari-btn">tambah</button>
       </div>
     </form>
-    <ul v-for="item in dataTodo">
-      <li>{{ item }}</li>
+
+    <ul v-for="item in dataTodo" >
+      <li class="list"><p>{{ item }}</p>
+        <button>Hapus</button>
+      </li>
     </ul>
+
+
     <!-- jika dataTodo ada isinya maka tampilkan ini -->
-    <p v-if="dataTodo.length">jumlah data ada 3</p>
-    <!-- jika dataTodo kosong isinya maka tampilkan ini -->
+    <p v-if="dataTodo.length">jumlah data ada {{ dataTodo.length }}</p>
+    <!-- jika dataTodo kosong isinya maka tampilk an ini -->
     <p v-else >belum ada data</p>
   </main>
 

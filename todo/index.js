@@ -6,10 +6,11 @@ const app = Vue.createApp({
     }
   },
   methods: {
-    tambahData(e){
-      this.dataTodo.push(this.newTodo)
-      this.newTodo = ''
-      e.preventDefault()
+    tambahData(){
+      if(this.newTodo !== ''){
+        this.dataTodo.push(this.newTodo)
+        this.newTodo = ''
+      }
     }
   }
 })
