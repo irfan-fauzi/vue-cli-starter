@@ -5,6 +5,14 @@ const app = Vue.createApp({
     return {
       counter : 5
     }
+  },
+  methods: {
+    increment(){
+      console.log("ok")
+    },
+    decrement(){
+      console.log("del")
+    }
   }
 })
 // selector html

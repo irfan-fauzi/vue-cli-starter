@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Vue js</title>
 </head>
 <body>
 
@@ -13,8 +13,8 @@
     <div class="container">
       <h3 class="angka">{{ counter }}</h3>
       <div class="btn-wrap">
-        <button>tambah</button>
-        <button>kurangi</button>
+        <button v-on:click="increment">tambah</button>
+        <button v-on:click="decrement">kurangi</button>
       </div>
     </div>
   </div>
