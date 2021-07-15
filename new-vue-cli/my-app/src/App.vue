@@ -1,7 +1,10 @@
 <template>
   <div>
-    <h1>{{ myHeading }}</h1>
+    <h1 v-html="myHeading"></h1>
     <h2>{{ subTitle }}</h2>
+    <ul>
+      <li></li>
+    </ul>
   </div>
 </template>
 
@@ -9,8 +12,22 @@
 export default {
   data(){
     return{
-      myHeading: "saya adalah vue",
-      subTitle: "hahah ini subtitle"
+      myHeading: `<h1>Heding</h1>`,
+      subTitle: "hahah ini subtitle",
+      array : [
+        {
+          nama: "irfan fauzi",
+          email: "irfanfauzi@yahoo.com"
+        },
+         {
+          nama: "irfan fauzi",
+          email: "irfanfauzi@yahoo.com"
+        },
+         {
+          nama: "irfan fauzi",
+          email: "irfanfauzi@yahoo.com"
+        }
+      ]
     }
   } 
 }
